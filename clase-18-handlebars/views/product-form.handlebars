@@ -1,0 +1,31 @@
+<h1>Formulario de producto</h1>
+
+{{!-- Action es un atributo para enviar los valores del formulario al backend --}}
+<form action="/products/new" method="POST">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" placeholder="Ingrese el nombre del producto..." value="{{this.data.form_state.product.nombre}}">
+        {{#if this.data.errors.nombre}}
+        <span>{{this.data.errors.nombre}}</span>
+        {{/if}}
+    </div>
+    <div>
+        <label for="precio">Precio:</label>
+        <input id="precio" name="precio" placeholder="Ingrese el precio del producto..." value="{{this.data.form_state.product.precio}}">
+        {{#if this.data.errors.precio}}
+        <span>{{this.data.errors.precio}}</span>
+        {{/if}}
+    </div>
+    <div>
+        <label for="stock">Stock:</label>
+        <input id="stock" name="stock" placeholder="Ingrese el stock disponible del producto..." value="{{this.data.form_state.product.stock}}">
+        {{#if this.data.errors.stock}}
+        <span>{{this.data.errors.stock}}</span>
+        {{/if}}
+    </div>
+    <div>
+        <label for="descripcion">Descripcion:</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Ingrese la descripción del producto...">{{this.data.form_state.product.descripcion}}</textarea>
+    </div>
+    <input type="submit">
+</form>
