@@ -13,6 +13,7 @@ app.use(express.json())
 app.use('/api/status', statusRouter)
 app.use('/api/auth', authRouter)
 
+
 app.listen(PORT, () => {
     console.log(`El servidor se esta escuchando en http://localhost:${PORT}`)
 })

@@ -6,7 +6,9 @@ dotenv.config()
 const ENVIRONMENT = {
     PORT: process.env.PORT,
     DB_URL: process.env.DB_URL,
-    JWT_SECRET: process.env.JWT_SECRET
+    JWT_SECRET: process.env.JWT_SECRET,
+    GMAIL_PASS: process.env.GMAIL_PASS,
+    GMAIL_USER: process.env.GMAIL_USER
 }
 
 export default ENVIRONMENT

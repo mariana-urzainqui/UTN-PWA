@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import ENVIRONMENT from "../config/environment.config.js";
 
+
 mongoose.connect(ENVIRONMENT.DB_URL)
 .then(
     () => {
